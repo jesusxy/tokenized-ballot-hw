@@ -14,7 +14,7 @@ interacting with the TokenizedBallot.sol contract through the different scripts 
 
 ## Jesus
 
-### Created Script to deploy Tokenized Ballot Contract to Goerli Testnet
+### Created script to deploy Tokenized Ballot Contract to Goerli Testnet
 Script deploys Tokenized Ballot contract and passes 3 params
 - proposals
 - erc20VotesToken contract address
