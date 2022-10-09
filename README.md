@@ -1,6 +1,6 @@
 # Lesson 12 Weekend Homework - Oct 08/09
 
-This README file holds all the reports with each function execution, transaction hash, or the revert reason, when 
+This README file has our reports that go over each function execution, transaction hash, or the revert reason (if there was one), when 
 interacting with the TokenizedBallot.sol contract through the different scripts that we created.
 
 **Group Members:**
