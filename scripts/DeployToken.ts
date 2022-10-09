@@ -3,6 +3,8 @@ import * as dotenv from "dotenv";
 import { MyERC20Votes__factory, TokenizedBallot__factory } from "../typechain-types";
 dotenv.config();
 
+///// Jesus code / script
+
 const PROPOSALS = ["Proposal 1", "Proposal 2", "Proposal 3", "Proposal 4"];
 function convertStringArrayToBytes32(array: string[]) {
     const bytes32Array = [];
