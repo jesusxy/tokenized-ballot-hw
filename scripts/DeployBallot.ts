@@ -1,0 +1,1 @@
+// provide address that was created in deployToken script as a param
