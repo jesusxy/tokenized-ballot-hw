@@ -27,11 +27,11 @@ blockNumber: 7737687,
 tokenizedBallotAddress: 0x88C109F884dC9acc2A0eB8300ACFcD4BFC8D1B28
 ```
 
-##Arjun
+## Arjun
 
-## Created script to deploy ERC20Votes.ts to Goerli Testnet
+### Created script to deploy ERC20Votes.ts to Goerli Testnet
 
-## Deployment Tx Details
+###### Deployment Tx Details
 
 ```
 transactionHash: 0x82aeeacee50f7ef5b22f6c354df744caf1c372d4372a3c68c07e50fd231ecb18
