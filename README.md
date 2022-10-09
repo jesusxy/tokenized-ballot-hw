@@ -1,13 +1,17 @@
-# Sample Hardhat Project
+# Lesson 12 Weekend Homework - Oct 08/09
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This README file holds all the reports with each function execution, transaction hash, or the revert reason, when 
+interacting with the TokenizedBallot.sol contract through the different scripts that we created.
 
-Try running some of the following tasks:
+**Group Members:**
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+- Adrian Sandoval
+- Jesus Chavez
+- Arjun Mukherjee
+- Micah Bly
+- Jose Marvn Henriquez
+
+
+## Jesus
+
+### First function execution ->
