@@ -14,7 +14,7 @@ interacting with the TokenizedBallot.sol contract through the different scripts 
 
 ## Jesus
 
-### Created script to deploy Tokenized Ballot Contract to Goerli Testnet
+### Created script (DeployToken.ts + DeployBallot.ts) to deploy Tokenized Ballot Contract to Goerli Testnet
 Script deploys Tokenized Ballot contract and passes 3 params
 - proposals
 - erc20VotesToken contract address
@@ -28,7 +28,7 @@ tokenizedBallotAddress: 0x84DC87068c4642D4BcFFFC6aaC737Ec3dd592778,
 erc20VotesTokenAddress: 0x054C163B212fFF59Cb42aEAC9EF27C6803F490Cc
 ```
 
-### CastVote script details 
+### CastVote.ts script details 
 ###### Function exection-> `vote( )`
 
 This script casts a vote for a proposal. After vote has been successfully casted it also logs the `msg.sender` votingPower stats by calling `votingPowerSpent( )`. 
