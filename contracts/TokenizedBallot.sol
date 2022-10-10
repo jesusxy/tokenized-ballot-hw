@@ -1,11 +1,17 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
 
-interface IERC20Votes {
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+interface IERC20Votes is IERC20 {
     function getPastVotes(address, uint256) external view returns (uint256);
+    function mint(address to, uint256 amount) external;
+    function burn(address from, uint256 amount) external;
+    function buyTokens() external payable;
 }
 
-contract TokenizedBallot {
+contract TokenizedBallot is Ownable {
     uint256 public referenceBlock;
     IERC20Votes public tokenContract;
 
