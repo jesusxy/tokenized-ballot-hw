@@ -1,45 +1,25 @@
 import { ethers } from "ethers";
 import * as dotenv from "dotenv";
-import { MyERC20Votes__factory, TokenizedBallot__factory } from "../typechain-types";
+import { MyERC20Votes__factory } from "../typechain-types";
 dotenv.config();
 
-///// Jesus code / script
+///// Script deploys a ERC20Votes token
 
-const PROPOSALS = ["Proposal 1", "Proposal 2", "Proposal 3", "Proposal 4"];
-function convertStringArrayToBytes32(array: string[]) {
-    const bytes32Array = [];
-    for (let index = 0; index < array.length; index++) {
-      bytes32Array.push(ethers.utils.formatBytes32String(array[index]));
-    }
-    return bytes32Array;
-}
+/// its address will be passed as a param to TokenizedBallot constructor;
+
+const TOKEN_RATIO = 5;
 
 async function main() {
     // initialize wallet 
     const signer = await initWallet();
-    
-    // create erc20votes token contract
+
+    // create erc20Votes token contract 
     const erc20VotesFactory = new MyERC20Votes__factory(signer);
-    const erc20VotesContract = await erc20VotesFactory.deploy();
+    const erc20VotesContract = await erc20VotesFactory.deploy(TOKEN_RATIO);
     await erc20VotesContract.deployed();
 
     console.log(`Deployed erc20Votes token, address is: ${erc20VotesContract.address}`)
 
-    // get currBlock to pass as referencedBlock param
-    const currBlock = await signer.provider.getBlock("latest");
-    console.log(`Goerli Test net - Current block number is: ${currBlock.number}`);
-
-    // create tokenizedBallot contract
-    const tokenizedBallotFactory = new TokenizedBallot__factory(signer);
-    const tokenizedContract = await tokenizedBallotFactory.deploy(
-        convertStringArrayToBytes32(PROPOSALS),
-        erc20VotesContract.address,
-        currBlock.number
-    );
-    await tokenizedContract.deployed();
-
-    console.log(`TokenizedBallot contract deployed at address: ${tokenizedContract.address}`);
-    
 }
 
 async function initWallet() {
