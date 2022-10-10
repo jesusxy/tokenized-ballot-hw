@@ -3,7 +3,7 @@ import { MyERC20Votes__factory, TokenizedBallot__factory } from "../typechain-ty
 
 async function main() {
     const signer = await initWallet();
-    const tokenizedBallotAddr = process.env.TOKENIZED_BALLOT_ADDRES || "";
+    const tokenizedBallotAddr = process.env.TOKENIZED_BALLOT_ADDRESS || "";
 
     const tokenizedBallotFactory = new TokenizedBallot__factory(signer);
     const tokenizedBallotContract = tokenizedBallotFactory.attach(tokenizedBallotAddr);
