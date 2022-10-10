@@ -59,3 +59,16 @@ transactionHash: 0x82aeeacee50f7ef5b22f6c354df744caf1c372d4372a3c68c07e50fd231ec
 blockNumber: 7738878
 ERC20Votes deployed address: 0x6104fa66F78D715c4650bEE0EDDaF526F29a541B
 ```
+
+## Adrian
+
+### Ran script to query winning proposal
+
+###### Deployment Tx Details
+
+```
+from	0xaDD95228501c0769b1047975faf93FC798C4E76C
+to	0x84DC87068c4642D4BcFFFC6aaC737Ec3dd592778
+input	0xe2b...a53f0
+output bytes32: winnerName_ 0x50726f706f73616c203100000000000000000000000000000000000000000000
+```
