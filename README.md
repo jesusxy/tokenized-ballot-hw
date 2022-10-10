@@ -33,10 +33,18 @@ erc20VotesTokenAddress: 0x054C163B212fFF59Cb42aEAC9EF27C6803F490Cc
 
 This script casts a vote for a proposal. After vote has been successfully casted it also logs the `msg.sender` votingPower stats by calling `votingPowerSpent( )`. 
 
+I ran this script twice.. Casting a vote for both proposal 3 and proposal 1.
+
 ###### CastVote Tx details
 ```
 txHash: 0x4e61fc20c61863d4ae4d5a3cc59de813277f78ddd3b081aac2ea98cf3ae4a504,
 proposalToVoteFor: 3,
+votingPowerSpent: 0
+```
+
+```
+txHash: 0x9d2f6eb5846435670615c98b4bcb70391ac7e5ab4aae2964015aa0d622621a6c,
+proposalToVoteFor: 1,
 votingPowerSpent: 0
 ```
 
