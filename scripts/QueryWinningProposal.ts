@@ -1,21 +1,16 @@
 import { ethers } from "hardhat";
 import { MyERC20Votes__factory, TokenizedBallot__factory } from "../typechain-types";
 
-const TokenRatio = 5;
-
-// script will mint tokens to msg.sender
-async function main(){
+async function main() {
     const signer = await initWallet();
-    const erc20TokenAddress = process.env.MYERC20VOTES_ADDRESS || "";
+    const tokenizedBallotAddr = process.env.TOKENIZED_BALLOT_ADDRES || "";
 
-    const erc20TokenFactory = new MyERC20Votes__factory(signer);
-    const erc20TokenContract = erc20TokenFactory.attach(erc20TokenAddress);
-
-    const mintTokenTx = await erc20TokenContract.mint(signer.address, 20);
-    await mintTokenTx.wait();
-
-    console.log('---- mint successful ----', mintTokenTx);
-
+    const tokenizedBallotFactory = new TokenizedBallot__factory(signer);
+    const tokenizedBallotContract = tokenizedBallotFactory.attach(tokenizedBallotAddr);
+    
+    const winningProposal = await tokenizedBallotContract.winnerName();
+    
+    console.log(`The winning proposal with most votes was: ${winningProposal}`);
 
 }
 

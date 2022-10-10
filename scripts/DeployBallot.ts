@@ -13,6 +13,8 @@ function convertStringArrayToBytes32(array: string[]) {
     return bytes32Array;
 }
 
+// Deploys TokenizedBallot contract
+
 async function main() {
     // initialize wallet 
     const signer = await initWallet();
