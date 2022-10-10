@@ -28,6 +28,18 @@ tokenizedBallotAddress: 0x84DC87068c4642D4BcFFFC6aaC737Ec3dd592778,
 erc20VotesTokenAddress: 0x054C163B212fFF59Cb42aEAC9EF27C6803F490Cc
 ```
 
+### CastVote script details 
+###### Function exection-> `vote( )`
+
+This script casts a vote for a proposal. After vote has been successfully casted it also logs the `msg.sender` votingPower stats by calling `votingPowerSpent( )`. 
+
+###### CastVote Tx details
+```
+txHash: 0x4e61fc20c61863d4ae4d5a3cc59de813277f78ddd3b081aac2ea98cf3ae4a504,
+proposalToVoteFor: 3,
+votingPowerSpent: 0
+```
+
 ## Arjun
 
 ### Created script to deploy ERC20Votes.ts to Goerli Testnet
