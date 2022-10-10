@@ -15,7 +15,7 @@ async function main() {
 
     // create erc20Votes token contract 
     const erc20VotesFactory = new MyERC20Votes__factory(signer);
-    const erc20VotesContract = await erc20VotesFactory.deploy(TOKEN_RATIO);
+    const erc20VotesContract = await erc20VotesFactory.deploy();
     await erc20VotesContract.deployed();
 
     console.log(`Deployed erc20Votes token, address is: ${erc20VotesContract.address}`)
