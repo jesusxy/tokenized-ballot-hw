@@ -20,6 +20,7 @@ async function main() {
     const signer = await initWallet();
     const erc20TokenAddress = process.env.MYERC20VOTES_ADDRESS || "";
 
+    console.log(` erc20TokenAddress is: ${erc20TokenAddress}`);
 
     // get current block to pass as referencedBlock param
     const currBlock = await signer.provider.getBlock("latest");
