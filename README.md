@@ -24,7 +24,8 @@ Script deploys Tokenized Ballot contract and passes 3 params
 ```
 transactionHash: 0x4484580498cd29e2a86c7f018fa40d56812a8ae1527c36051ba8e0ae68b83e8a,
 blockNumber: 7746117,
-tokenizedBallotAddress: 0x84DC87068c4642D4BcFFFC6aaC737Ec3dd592778
+tokenizedBallotAddress: 0x84DC87068c4642D4BcFFFC6aaC737Ec3dd592778,
+erc20VotesTokenAddress: 0x054C163B212fFF59Cb42aEAC9EF27C6803F490Cc
 ```
 
 ## Arjun
